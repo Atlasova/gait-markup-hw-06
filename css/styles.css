@@ -49,7 +49,6 @@ body {
   margin: -1px;
   border: 0;
   padding: 0;
-
   white-space: nowrap;
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
@@ -58,8 +57,10 @@ body {
 /* ============ CONTAINER ============ */
 .container {
   max-width: 320px;
-  padding: 0 16px;
-  margin: 0 auto;
+  padding-left: 16px;
+  padding-right: 16px;
+  margin-left: auto;
+  margin-right: auto;
 }
 @media screen and (min-width: 768px) {
   .container {
@@ -69,7 +70,8 @@ body {
 @media screen and (min-width: 1158px) {
   .container {
     max-width: 1158px;
-    padding: 0 15px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 /* ============ HEADER ============ */
@@ -213,10 +215,10 @@ body {
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
     visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-/*====== .is-open-mob {
+/* ==== .is-open-mob {
   opacity: 1;
   visibility: visible;
-} ===== */
+} === */
 
 .mob-menu-close-btn {
   display: flex;
@@ -271,7 +273,9 @@ body {
 .mob-menu-link.active {
   color: #404bbf;
 }
-
+.backlight {
+  color: #404bbf;
+}
 .mob-menu-adress {
   margin-bottom: 48px;
 }
@@ -296,7 +300,9 @@ body {
 .mob-menu-contact-link:focus {
   color: #404bbf;
 }
-
+.backlight-tel {
+  color: #404bbf;
+}
 .mob-menu-social-list {
   display: flex;
   justify-content: center;
@@ -326,9 +332,6 @@ body {
 /* ============ HERO ============ */
 .hero {
   background-color: #2e2f42;
-  padding-top: 72px;
-  padding-bottom: 72px;
-  tab-size: 4;
   background-image: linear-gradient(
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
@@ -337,9 +340,10 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  max-width: 1440px;
-  min-width: 320px;
-  height: 432px;
+  background-clip: padding-box;
+  max-width: 320px;
+  min-height: 432px;
+  padding: 72px 0;
   margin: 0 auto;
 }
 @media (min-device-pixel-ratio: 2),
@@ -363,12 +367,11 @@ body {
   color: #fff;
   box-sizing: border-box;
   display: block;
-  height: 156px;
-  width: 216px;
+
+  max-width: 216px;
   margin-bottom: 72px;
-  margin-left: 52px;
-  margin-right: 52px;
-  tab-size: 4;
+  margin-left: auto;
+  margin-right: auto;
 }
 .orden-service-btn {
   font-weight: 500;
@@ -402,17 +405,15 @@ body {
         rgba(46, 47, 66, 0.7)
       ),
       url(../images/hero/people-office-tab.jpg);
-    width: 768px;
-    height: 436px;
+    max-width: 768px;
+    min-height: 436px;
+    padding: 112px 0;
   }
   .main-title {
     font-size: 56px;
-    margin-bottom: 0px;
-    margin-left: 136px;
-    margin-right: 136px;
-    width: 496px;
-    height: 154px;
-    padding-bottom: 36px;
+    line-height: 1.07;
+    max-width: 496px;
+    margin-bottom: 36px;
   }
 }
 @media (min-device-pixel-ratio: 2),
@@ -435,15 +436,10 @@ body {
       url(../images/hero/people-office.jpg);
     width: 1440px;
     height: 600px;
-    padding-top: 188px;
-    padding-bottom: 188px;
+    padding: 188px 0;
   }
   .main-title {
-    width: 496px;
-    padding-bottom: 48px;
-    font-size: 56px;
-    line-height: 107%;
-    margin: 0 auto;
+    margin-bottom: 48px;
   }
 }
 @media (min-device-pixel-ratio: 2),
