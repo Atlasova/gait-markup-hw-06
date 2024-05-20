@@ -514,6 +514,7 @@ body {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #434455;
+  margin-bottom: 72px;
 }
 @media screen and (min-width: 768px) {
   .benefits-list-title {
@@ -524,6 +525,7 @@ body {
     letter-spacing: 1px;
     text-align: left;
   }
+
   .benefits-list {
     flex-direction: row;
     flex-wrap: wrap;
@@ -627,6 +629,7 @@ body {
   width: calc(100% - 24px);
   margin: 0 auto;
 }
+
 .our-team-list-title {
   font-weight: 500;
   font-size: 20px;
